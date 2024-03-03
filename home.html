@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Navbar</title>
+    <style>
+        * {box-sizing: border-box;}
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+        body {
+            margin: 0;
+            font-family: "Playfair Display", serif;
+        }
+
+        .navbar {
+            background-color: white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            text-align: center;
+            padding: 15px 0;
+            z-index: 1000;
+        }
+
+        .navbar img {
+            width: 80px; /* Adjust the width as needed */
+            height: auto; /* Adjust the height as needed */
+            margin-right: 10px; /* Adjust the margin as needed */
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .navbar h1 {
+            margin: 0;
+            color: #fe5bac;
+            position: relative;
+            padding-bottom: 25px; 
+            margin-bottom: 10px; 
+        }
+        .navbar h1::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: pink;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .navbar a {
+            color: #fe5bac;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 10px;
+            display: inline-block;
+            padding-bottom: 15px; 
+        }
+
+        .navbar a::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: pink;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .content {
+            position: relative;
+            margin-top: 120px;
+            padding: 20px;
+            height: 0px;
+        }
+
+        .content img{
+            margin-left: 0px;
+        }
+        .overlay-text {
+            position: absolute;
+            top: 307px;
+            left: 45%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fe5bac; /* Adjust the text color */
+            z-index: 1;
+            color: #fe5bac;
+            text-decoration: none;
+        }
+
+        .overlay-text h2 {
+            margin: 0;
+        }
+
+        .overlay-text p {
+            margin: 10px 0;
+        }
+
+        .icons h1{
+            position: relative;
+            margin-top: 467px;
+            margin-left: 415px;
+            color: #fe5bac;
+        }
+        .mySlides {display: none;}
+        img {vertical-align: middle;}
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 600px;
+            position: center;
+            margin-left: 425px;
+            margin-top: 0px;
+            margin-bottom: 100px;
+        }
+
+        /* Caption text */
+        .text {
+            color: #000000;
+            font-size: 15px;
+            padding: 8px 12px;
+            
+            bottom: 8px;
+            width: 100%;
+            margin-top: 0px;
+            margin-left: 180px;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 18px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 500;
+            
+        }
+        .active {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+        .text {font-size: 11px}
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <img src="logo5.gif">
+    <h1>EmpowerHER Perspectives</h1>
+    <a href="home.html">Home</a>
+    <a href="fitness.html">Fitness</a>
+    <a href="index.html">HER Blog</a>
+    <a href="https://pusheenplayground.study">HER Pusheen Playground</a>
+    <a href="resources.html">Resources</a>
+</div>
+
+
+<div class="content">
+    <div class="overlay-text">
+        <a href="https://open.spotify.com/artist/5pKCCKE2ajJHZ9KAiaK11H"><h2>-Rihanna</h2></a>
+       
+    </div>
+    <img src="thirteen.png">
+</div>
+<div class="icons">
+    <h1>Empowered Women of the Past and Present</h1>
+</div>
+
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 6</div>
+      <img src="jane.png" style="width:100%">
+      <div class="text">Jane Austen, 1775–1817, Author</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">2 / 6</div>
+        <img src="tubman.png" style="width:100%">
+        <div class="text">Harriet Tubman, 1822-1913, Freedom Fighter</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 6</div>
+      <img src="frida.png" style="width:100%">
+      <div class="text">Frida Kahlo, 1907-1954, Mexican Artist</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 6</div>
+      <img src="indira.png" style="width:100%">
+      <div class="text">Indira Gandhi, 1917-1984, Indian prime minister</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">5 / 6</div>
+        <img src="monroe.png" style="width:100%">
+        <div class="text">Marilyn Monroe, 1926-1962, American Actress</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">6 / 6</div>
+        <img src="obama.png" style="width:100%">
+        <div class="text">Michelle Obama, 1964 - , Former First Lady of the U.S. and Attorney/Author </div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 6</div>
+        <img src="malala.png" style="width:100%">
+        <div class="text">Malala Yousafzai, 1997 - , Pakastani Education Activist</div>
+    </div>
+    
+</div>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+</script>
+<footer class="footer">
+    <p>&copy; 2024 EmpowerHER Perspectives. All rights reserved.</p>
+</footer>
+</body>
+</html>
+
